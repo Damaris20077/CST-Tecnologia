@@ -65,6 +65,7 @@ nav a{
 
 
 
+
 button{
 
     margin-top:20px;
@@ -175,6 +176,27 @@ section{
     border-radius:15px;
 
     box-shadow:0 5px 15px #ccc;
+
+}
+
+
+
+
+
+/* ESPACIOS EN UBICACIÓN */
+
+#ubicacion p{
+
+    margin-bottom:15px;
+
+}
+
+
+#ubicacion iframe{
+
+    margin-top:30px;
+
+    border-radius:15px;
 
 }
 
