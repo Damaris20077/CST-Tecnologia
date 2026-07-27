@@ -12,8 +12,9 @@ body{
 
 
 
-header{
+/* HEADER */
 
+header{
     background:#111;
     color:white;
     padding:20px;
@@ -27,7 +28,6 @@ header{
 
 
 nav a{
-
     color:white;
     text-decoration:none;
     margin:15px;
@@ -36,7 +36,13 @@ nav a{
 
 
 
+nav a:hover{
+    color:#2563eb;
+}
 
+
+
+/* INICIO */
 
 .inicio{
 
@@ -65,6 +71,21 @@ nav a{
 
 
 
+section{
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* BOTONES */
+
+
 button{
 
     margin-top:20px;
@@ -74,6 +95,7 @@ button{
     border:none;
 
     background:#111;
+
     color:white;
 
     border-radius:8px;
@@ -94,13 +116,14 @@ button:hover{
 
 
 
-/* BOTÓN DEL CATÁLOGO */
+/* CATALOGO */
+
 
 .boton-catalogo{
 
     margin-top:25px;
 
-    margin-bottom:40px;
+    margin-bottom:30px;
 
     padding:14px 35px;
 
@@ -108,23 +131,15 @@ button:hover{
 
     color:white;
 
-    border:none;
-
     border-radius:10px;
 
     font-size:17px;
-
-    cursor:pointer;
-
-    transition:0.3s;
 
 }
 
 
 
 .boton-catalogo:hover{
-
-    background:#333;
 
     transform:scale(1.05);
 
@@ -134,19 +149,8 @@ button:hover{
 
 
 
-section{
+/* TARJETAS */
 
-    padding:50px;
-
-    text-align:center;
-
-}
-
-
-
-
-
-/* TARJETAS DE MARCAS */
 
 .tarjetas{
 
@@ -158,9 +162,9 @@ section{
 
     margin-top:20px;
 
+    flex-wrap:wrap;
+
 }
-
-
 
 
 
@@ -182,40 +186,162 @@ section{
 
 
 
-/* MEJORAR UBICACIÓN */
+/* FORMULARIO */
 
-#ubicacion h2{
 
-    margin-bottom:25px;
+#pedido{
+
+    background:white;
 
 }
 
 
-#ubicacion p{
 
-    margin-bottom:20px;
+.formulario{
+
+    max-width:500px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+
+.formulario textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+
+
+.formulario button{
+
+    background:#2563eb;
 
     font-size:17px;
 
 }
 
 
-#ubicacion iframe{
 
-    margin-top:60px;
+.formulario button:hover{
 
-    width:600px;
-
-    max-width:100%;
-
-    height:450px;
-
-    border-radius:15px;
+    background:#1d4ed8;
 
 }
 
 
 
+
+
+
+
+/* UBICACION */
+
+
+#ubicacion{
+
+    padding-top:30px;
+
+}
+
+
+
+#ubicacion h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+#ubicacion iframe{
+
+
+    width:100%;
+
+    max-width:700px;
+
+    height:320px;
+
+    border:0;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#ubicacion p{
+
+    margin-top:10px;
+
+    font-size:17px;
+
+}
+
+
+
+
+
+
+/* REDES */
+
+
+#redes a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+}
+
+
+
+#redes a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+
+
+
+/* FOOTER */
 
 
 footer{
@@ -227,5 +353,60 @@ footer{
     text-align:center;
 
     padding:20px;
+
+}
+
+
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+}
+
+
+
+nav{
+
+    margin-top:15px;
+
+}
+
+
+
+nav a{
+
+    display:block;
+
+    margin:10px;
+
+}
+
+
+
+.inicio h2{
+
+    font-size:30px;
+
+}
+
+
+
+section{
+
+    padding:25px;
+
+}
+
 
 }
