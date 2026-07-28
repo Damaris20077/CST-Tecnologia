@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,9 +11,7 @@
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -36,22 +33,19 @@
 
 
 
+
 <!-- INICIO -->
 
 <section id="inicio" class="inicio">
 
 <div>
 
-<h2>
-Encuentra el celular ideal para ti
-</h2>
-
+<h2>Encuentra el celular ideal para ti</h2>
 
 <p>
-Venta de celulares de diferentes marcas, modelos y accesorios tecnológicos.
-Calidad, variedad y tecnología al alcance de todos.
+Venta de celulares, accesorios y tecnología.
+Las mejores marcas al mejor precio.
 </p>
-
 
 </div>
 
@@ -63,25 +57,19 @@ Calidad, variedad y tecnología al alcance de todos.
 
 <!-- EMPRESA -->
 
-
 <section id="negocio">
 
-
-<h2>
-CST Servicio & Tecnología
-</h2>
-
+<h2>CST Servicio & Tecnología</h2>
 
 <p>
 
-Somos una empresa dedicada a la comercialización
-de celulares y productos tecnológicos.
-Ofrecemos equipos de diferentes marcas con
-excelente calidad y asesoramiento personalizado
-para ayudarte a elegir el dispositivo perfecto.
+Somos una empresa dedicada a la venta de celulares,
+accesorios tecnológicos y asesoramiento personalizado.
+
+Nuestro objetivo es ayudarte a encontrar el equipo
+perfecto según tus necesidades y presupuesto.
 
 </p>
-
 
 </section>
 
@@ -92,14 +80,9 @@ para ayudarte a elegir el dispositivo perfecto.
 
 <!-- PRODUCTOS -->
 
-
 <section id="productos">
 
-
-<h2>
-📱 Catálogo de Celulares
-</h2>
-
+<h2> Catálogo de Celulares</h2>
 
 <a href="./documentos/catalogo.pdf" target="_blank">
 
@@ -111,19 +94,17 @@ Ver Catálogo
 
 </a>
 
-
-
-
 <div class="tarjetas">
-
 
 <div class="card">
 
 <h3>Samsung</h3>
 
 <p>
-Celulares Samsung Galaxy con gran rendimiento,
-excelentes cámaras y tecnología avanzada.
+
+Celulares Galaxy con excelente rendimiento,
+cámaras increíbles y tecnología de última generación.
+
 </p>
 
 </div>
@@ -132,15 +113,16 @@ excelentes cámaras y tecnología avanzada.
 
 <div class="card">
 
-<h3>iPhone</h3>
+<h3>Apple</h3>
 
 <p>
-Equipos Apple con diseño premium,
-potencia y gran experiencia de usuario.
+
+iPhone con diseño premium,
+gran potencia y excelente experiencia.
+
 </p>
 
 </div>
-
 
 
 
@@ -149,12 +131,13 @@ potencia y gran experiencia de usuario.
 <h3>Xiaomi</h3>
 
 <p>
-Celulares con gran relación calidad-precio,
-ideal para todo tipo de usuarios.
+
+Excelente relación calidad-precio
+para cualquier usuario.
+
 </p>
 
 </div>
-
 
 
 
@@ -163,15 +146,15 @@ ideal para todo tipo de usuarios.
 <h3>Motorola</h3>
 
 <p>
-Equipos resistentes, modernos y con
-excelente rendimiento.
+
+Equipos resistentes,
+modernos y confiables.
+
 </p>
 
 </div>
 
-
 </div>
-
 
 </section>
 
@@ -180,75 +163,125 @@ excelente rendimiento.
 
 
 
-
-<!-- FORMULARIO DE COMPRA -->
-
+<!-- FORMULARIO -->
 
 <section id="pedido">
 
-
-<h2>
-🛒 Solicita tu celular
-</h2>
-
+<h2> Solicitud de Compra</h2>
 
 <p>
-Completa el formulario y nos pondremos en contacto contigo.
+
+Completa este formulario y uno de nuestros asesores
+se comunicará contigo.
+
 </p>
 
+<form class="formulario" onsubmit="mostrarMensaje(event)">
 
+<div class="grupo">
 
-<form class="formulario" action="https://formsubmit.co/0962055495" method="POST">
+<label> Nombre completo</label>
 
+<input
+type="text"
+placeholder="Escribe tu nombre"
+required>
 
-<input type="text" name="nombre" placeholder="Nombre completo" required>
+</div>
 
+<div class="grupo">
 
-<input type="tel" name="telefono" placeholder="Número de WhatsApp" required>
+<label> Número de contacto</label>
 
+<input
+type="tel"
+placeholder="0999999999"
+required>
 
+</div>
 
-<select name="marca">
+<div class="grupo">
 
-<option>
-Selecciona la marca
+<label> Marca del celular</label>
+
+<select id="marca" required>
+
+<option value="">
+
+Selecciona una marca
+
 </option>
 
-<option>Samsung</option>
+<option value="Samsung">Samsung</option>
 
-<option>iPhone</option>
+<option value="Apple">Apple (iPhone)</option>
 
-<option>Xiaomi</option>
+<option value="Xiaomi">Xiaomi</option>
 
-<option>Motorola</option>
+<option value="POCO">POCO</option>
 
-<option>Otra</option>
+<option value="Motorola">Motorola</option>
+
+<option value="Honor">Honor</option>
+
+<option value="Huawei">Huawei</option>
+
+<option value="Oppo">Oppo</option>
+
+<option value="Realme">Realme</option>
+
+<option value="Tecno">Tecno</option>
+
+<option value="Infinix">Infinix</option>
+
+<option value="Vivo">Vivo</option>
+
+<option value="Nokia">Nokia</option>
 
 </select>
 
+</div>
 
+<div class="grupo">
 
-<input type="text" name="modelo" placeholder="Modelo del celular">
+<label> Modelo del celular</label>
 
+<select id="modelo" required>
 
+<option value="">
 
-<select name="pago">
+Primero selecciona una marca
 
-<option>
-Método de pago
 </option>
+
+</select>
+
+</div>
+<div class="grupo">
+
+<label> Método de pago</label>
+
+<select>
 
 <option>Efectivo</option>
 
-<option>Transferencia</option>
+<option>Transferencia bancaria</option>
 
-<option>Tarjeta</option>
+<option>Tarjeta de crédito/débito</option>
 
 </select>
 
+</div>
 
 
-<textarea name="mensaje" placeholder="Escribe alguna consulta"></textarea>
+
+<div class="grupo">
+
+<label> Mensaje adicional</label>
+
+<textarea placeholder="Escribe alguna consulta sobre el equipo"></textarea>
+
+</div>
 
 
 
@@ -257,6 +290,10 @@ Método de pago
 Enviar solicitud
 
 </button>
+
+
+
+<p id="mensajeExito"></p>
 
 
 </form>
@@ -276,38 +313,39 @@ Enviar solicitud
 <section id="ubicacion">
 
 
-<h2>
-📍 Ubicación
-</h2>
-
-
+<h2> Nuestra Ubicación</h2>
 
 
 <iframe 
 
 src="https://www.google.com/maps/embed?pb=!3m2!1ses-419!2sec!4v1785091166282!5m2!1ses-419!2sec!6m8!1m7!1sF0kWjRSbFLIrn5tNdN-5cw!2m2!1d-0.68971830340471!2d-77.31107087868233!3f272.26329029568774!4f1.455916458626504!5f0.7820865974627469"
 
-allowfullscreen=""
+loading="lazy"
 
-loading="lazy">
+allowfullscreen>
 
 </iframe>
 
 
 
-
 <p>
+
 <strong>CST Servicio & Tecnología - Ecuador</strong>
+
 </p>
 
 
 <p>
+
 📍 Av Rafael Andrade s/n y Magdalena Ushiña
+
 </p>
 
 
 <p>
+
 Visítanos y encuentra el celular que necesitas.
+
 </p>
 
 
@@ -319,19 +357,19 @@ Visítanos y encuentra el celular que necesitas.
 
 
 
-<!-- REDES -->
+<!-- REDES SOCIALES -->
 
 
 <section id="redes">
 
 
-<h2>
-🌐 Redes Sociales
-</h2>
+<h2> Redes Sociales</h2>
 
 
 <p>
-Síguenos para conocer nuestros nuevos equipos y promociones:
+
+Síguenos para conocer nuevos equipos y promociones.
+
 </p>
 
 
@@ -346,6 +384,7 @@ Instagram: CSTtecnologia
 <br><br>
 
 
+
 <a href="https://www.tiktok.com/@cstserviciotecnologia" target="_blank">
 
 TikTok: @cstserviciotecnologia
@@ -356,6 +395,7 @@ TikTok: @cstserviciotecnologia
 <br><br>
 
 
+
 <a href="https://wa.me/593962055495" target="_blank">
 
 WhatsApp: 0962055495
@@ -363,7 +403,9 @@ WhatsApp: 0962055495
 </a>
 
 
+
 </section>
+
 
 
 
