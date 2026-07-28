@@ -1,94 +1,41 @@
-// MODELOS DE CELULARES POR MARCA
+// MODELOS DE CELULARES EN VENTA
 
 const celulares = {
 
     Samsung: [
-        "Galaxy S24 Ultra",
-        "Galaxy S24",
-        "Galaxy S23",
-        "Galaxy A55",
-        "Galaxy A35",
-        "Galaxy A25",
-        "Galaxy A15"
-    ],
-
-    Apple: [
-        "iPhone 15 Pro Max",
-        "iPhone 15 Pro",
-        "iPhone 15",
-        "iPhone 14",
-        "iPhone 13",
-        "iPhone 12"
+        "Samsung Galaxy A16",
+        "Samsung Galaxy A26",
+        "Samsung Galaxy A36",
+        "Samsung Galaxy A56",
+        "Samsung Galaxy S25"
     ],
 
     Xiaomi: [
-        "Xiaomi 14",
-        "Xiaomi Redmi Note 13 Pro",
-        "Redmi Note 13",
-        "Redmi Note 12",
-        "Redmi 12"
+        "Redmi 14C",
+        "Redmi Note 14 Pro",
+        "Redmi Note 14"
     ],
 
     POCO: [
-        "POCO F6",
-        "POCO X6 Pro",
-        "POCO X6",
-        "POCO M6"
+        "POCO X7 Pro",
+        "POCO X7"
     ],
 
     Motorola: [
-        "Motorola Edge 50",
-        "Moto G84",
-        "Moto G54",
-        "Moto G34"
+        "Moto G15",
+        "Moto G35",
+        "Moto G75"
     ],
 
     Honor: [
-        "Honor Magic 6 Pro",
-        "Honor 90",
-        "Honor X8"
+        "Honor X6c",
+        "Honor X8c",
+        "Honor 400 Lite"
     ],
 
-    Huawei: [
-        "Huawei P60 Pro",
-        "Huawei Nova 12",
-        "Huawei Mate 50"
-    ],
-
-    Oppo: [
-        "Oppo Reno 11",
-        "Oppo A78",
-        "Oppo A58"
-    ],
-
-    Realme: [
-        "Realme 12 Pro",
-        "Realme C55",
-        "Realme C53"
-    ],
-
-    Tecno: [
-        "Tecno Camon 20",
-        "Tecno Spark 10",
-        "Tecno Pova 5"
-    ],
-
-    Infinix: [
-        "Infinix Note 40",
-        "Infinix Note 30",
-        "Infinix Hot 40"
-    ],
-
-    Vivo: [
-        "Vivo V30",
-        "Vivo Y36",
-        "Vivo Y27"
-    ],
-
-    Nokia: [
-        "Nokia G42",
-        "Nokia C32",
-        "Nokia C22"
+    Apple: [
+        "iPhone 13",
+        "iPhone 14"
     ]
 
 };
@@ -100,11 +47,11 @@ const marca = document.getElementById("marca");
 const modelo = document.getElementById("modelo");
 
 
-// CAMBIAR MODELOS CUANDO CAMBIA LA MARCA
+// CAMBIAR MODELOS SEGÚN LA MARCA
 
 marca.addEventListener("change", function(){
 
-    modelo.innerHTML = 
+    modelo.innerHTML =
     '<option value="">Selecciona un modelo</option>';
 
 
@@ -130,12 +77,11 @@ marca.addEventListener("change", function(){
 });
 
 
-// MENSAJE AL ENVIAR FORMULARIO
+// MENSAJE DE ENVÍO
 
 function mostrarMensaje(event){
 
     event.preventDefault();
-
 
     document.getElementById("mensajeExito").innerHTML =
     "✅ Solicitud enviada correctamente. Un asesor se comunicará contigo.";
