@@ -17,6 +17,7 @@ const celulares = {
         "Redmi Note 14"
     ],
 
+
     Motorola: [
         "Moto G15",
         "Moto G35",
@@ -37,6 +38,8 @@ const celulares = {
     ]
 
 };
+
+
 
 
 
@@ -104,38 +107,40 @@ if(marca && modelo){
 
 
 
+
+
 // MENSAJE AL ENVIAR SOLICITUD
 
 
-const formulario = document.getElementById("formulario");
+function mostrarMensaje(event){
+
+
+    event.preventDefault();
 
 
 
-if(formulario){
+    // Toma el número que escribió el cliente
 
-
-    formulario.addEventListener("submit", function(e){
-
-
-        e.preventDefault();
+    let numeroCliente = document.querySelector('input[type="tel"]').value;
 
 
 
-        document.getElementById("mensajeExito").innerHTML =
-
-        "✅ ¡Solicitud enviada correctamente! <br><br>" +
-
-        "Gracias por confiar en CST Servicio & Tecnología. " +
-
-        "Hemos informado a nuestro asesor y se comunicará contigo al número 📞 0962055495 para ayudarte con tu compra.";
+    document.getElementById("mensajeExito").innerHTML =
 
 
+    "✅ ¡Solicitud recibida correctamente! <br><br>" +
 
-        formulario.reset();
+    "Gracias por confiar en <strong>CST Servicio & Tecnología</strong>. <br><br>" +
+
+    "Nuestro equipo se comunicará contigo al número 📞 <strong>" 
+    + numeroCliente +
+    "</strong> para continuar con tu compra. <br><br>" +
+
+    "📱 Estamos listos para ayudarte a encontrar el celular ideal.";
 
 
 
-    });
+    document.querySelector(".formulario").reset();
 
 
 
