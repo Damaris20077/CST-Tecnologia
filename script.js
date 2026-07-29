@@ -10,19 +10,16 @@ const celulares = {
         "Galaxy S25"
     ],
 
-
     Xiaomi: [
         "Redmi 14C",
         "Redmi Note 14 Pro",
         "Redmi Note 14"
     ],
 
-
     POCO: [
         "POCO X7 Pro",
         "POCO X7"
     ],
-
 
     Motorola: [
         "Moto G15",
@@ -30,13 +27,11 @@ const celulares = {
         "Moto G75"
     ],
 
-
     Honor: [
         "Honor X6c",
         "Honor X8c",
         "Honor 400 Lite"
     ],
-
 
     Apple: [
         "iPhone 13",
@@ -47,62 +42,70 @@ const celulares = {
 
 
 
-
 // CAMBIAR MODELOS SEGÚN MARCA
 
 const marca = document.getElementById("marca");
 const modelo = document.getElementById("modelo");
 
 
+if(marca && modelo){
 
-marca.addEventListener("change", function(){
+    marca.addEventListener("change", function(){
 
-
-    let marcaSeleccionada = this.value;
-
-
-    modelo.innerHTML = 
-    '<option value="">Selecciona un modelo</option>';
+        let marcaSeleccionada = this.value;
 
 
-
-    if(celulares[marcaSeleccionada]){
-
-
-        celulares[marcaSeleccionada].forEach(function(nombre){
+        modelo.innerHTML =
+        '<option value="">Selecciona un modelo</option>';
 
 
-            let opcion = document.createElement("option");
+        if(celulares[marcaSeleccionada]){
 
-            opcion.value = nombre;
-
-            opcion.textContent = nombre;
+            celulares[marcaSeleccionada].forEach(function(nombre){
 
 
-            modelo.appendChild(opcion);
+                let opcion = document.createElement("option");
 
 
-        });
+                opcion.value = nombre;
+
+                opcion.textContent = nombre;
 
 
-    }
+                modelo.appendChild(opcion);
 
 
-});
+            });
+
+        }
 
 
+    });
+
+}
 
 
 
-// MENSAJE AL ENVIAR FORMULARIO
+// MENSAJE AL ENVIAR SOLICITUD
 
-function mostrarMensaje(event){
-
-    event.preventDefault();
+const formulario = document.getElementById("formulario");
 
 
-    document.getElementById("mensajeExito").innerHTML =
-    "✅ Solicitud enviada correctamente. Un asesor se comunicará contigo.";
+if(formulario){
 
+    formulario.addEventListener("submit", function(e){
+
+
+        e.preventDefault();
+
+
+        document.getElementById("mensajeExito").innerHTML =
+        "✅ Solicitud enviada correctamente. Un asesor se comunicará contigo.";
+
+
+        formulario.reset();
+
+
+    });
 
 }
