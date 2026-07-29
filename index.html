@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +12,9 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -33,9 +36,6 @@
 
 
 
-
-<!-- INICIO -->
-
 <section id="inicio" class="inicio">
 
 <div>
@@ -53,9 +53,6 @@ Las mejores marcas al mejor precio.
 
 
 
-
-
-<!-- EMPRESA -->
 
 <section id="negocio">
 
@@ -77,12 +74,11 @@ perfecto según tus necesidades y presupuesto.
 
 
 
-
-<!-- PRODUCTOS -->
-
 <section id="productos">
 
-<h2> Catálogo de Celulares</h2>
+
+<h2>Catálogo de Celulares</h2>
+
 
 <a href="./documentos/catalogo.pdf" target="_blank">
 
@@ -94,67 +90,109 @@ Ver Catálogo
 
 </a>
 
+
+
+
 <div class="tarjetas">
 
+
+
 <div class="card">
 
-<h3>Samsung</h3>
+<h3>SAMSUNG</h3>
 
 <p>
-
-Celulares Galaxy con excelente rendimiento,
-cámaras increíbles y tecnología de última generación.
-
+Samsung Galaxy A16<br>
+Samsung Galaxy A26<br>
+Samsung Galaxy A36<br>
+Samsung Galaxy A56<br>
+Samsung Galaxy S25
 </p>
 
 </div>
 
 
 
+
+
 <div class="card">
 
-<h3>Apple</h3>
+<h3>XIAOMI</h3>
 
 <p>
-
-iPhone con diseño premium,
-gran potencia y excelente experiencia.
-
+Redmi 14C<br>
+Redmi Note 14 Pro<br>
+Redmi Note 14
 </p>
 
 </div>
 
 
 
+
+
 <div class="card">
 
-<h3>Xiaomi</h3>
+<h3>POCO</h3>
 
 <p>
-
-Excelente relación calidad-precio
-para cualquier usuario.
-
+POCO X7 Pro<br>
+POCO X7
 </p>
 
 </div>
 
 
 
+
+
 <div class="card">
 
-<h3>Motorola</h3>
+<h3>MOTOROLA</h3>
 
 <p>
-
-Equipos resistentes,
-modernos y confiables.
-
+Moto G15<br>
+Moto G35<br>
+Moto G75
 </p>
 
 </div>
 
+
+
+
+
+<div class="card">
+
+<h3>HONOR</h3>
+
+<p>
+Honor X6c<br>
+Honor X8c<br>
+Honor 400 Lite
+</p>
+
 </div>
+
+
+
+
+
+<div class="card">
+
+<h3>APPLE</h3>
+
+<p>
+iPhone 13<br>
+iPhone 14
+</p>
+
+</div>
+
+
+
+</div>
+
 
 </section>
 
@@ -162,91 +200,107 @@ modernos y confiables.
 
 
 
-
-<!-- FORMULARIO -->
-
 <section id="pedido">
 
-<h2> Solicitud de Compra</h2>
+
+<h2>Solicitud de Compra</h2>
+
 
 <p>
-
 Completa este formulario y uno de nuestros asesores
 se comunicará contigo.
-
 </p>
+
+
 
 <form class="formulario" onsubmit="mostrarMensaje(event)">
 
+
+
 <div class="grupo">
 
-<label> Nombre completo</label>
+<label>Nombre completo</label>
 
-<input
+<input 
 type="text"
 placeholder="Escribe tu nombre"
 required>
 
 </div>
 
+
+
+
 <div class="grupo">
 
-<label> Número de contacto</label>
+<label>Número de contacto</label>
 
-<input
+<input 
 type="tel"
 placeholder="0999999999"
 required>
 
 </div>
 
+
+
+
 <div class="grupo">
 
-<label> Marca del celular</label>
+<label>Marca del celular</label>
+
 
 <select id="marca" required>
 
+
 <option value="">
-
 Selecciona una marca
-
 </option>
 
-<option value="Samsung">Samsung</option>
 
-<option value="Apple">Apple (iPhone)</option>
+<option value="Samsung">
+Samsung
+</option>
 
-<option value="Xiaomi">Xiaomi</option>
 
-<option value="POCO">POCO</option>
+<option value="Xiaomi">
+Xiaomi
+</option>
 
-<option value="Motorola">Motorola</option>
 
-<option value="Honor">Honor</option>
+<option value="POCO">
+POCO
+</option>
 
-<option value="Huawei">Huawei</option>
 
-<option value="Oppo">Oppo</option>
+<option value="Motorola">
+Motorola
+</option>
 
-<option value="Realme">Realme</option>
 
-<option value="Tecno">Tecno</option>
+<option value="Honor">
+Honor
+</option>
 
-<option value="Infinix">Infinix</option>
 
-<option value="Vivo">Vivo</option>
+<option value="Apple">
+Apple
+</option>
 
-<option value="Nokia">Nokia</option>
 
 </select>
 
+
 </div>
+<!-- MODELO DEL CELULAR -->
 
 <div class="grupo">
 
-<label> Modelo del celular</label>
+<label>Modelo del celular</label>
+
 
 <select id="modelo" required>
+
 
 <option value="">
 
@@ -254,34 +308,71 @@ Primero selecciona una marca
 
 </option>
 
+
 </select>
 
+
 </div>
+
+
+
+
+
+<!-- MÉTODO DE PAGO -->
+
+
 <div class="grupo">
 
-<label> Método de pago</label>
+
+<label>Método de pago</label>
+
 
 <select>
 
-<option>Efectivo</option>
 
-<option>Transferencia bancaria</option>
+<option>
 
-<option>Tarjeta de crédito/débito</option>
+Efectivo
+
+</option>
+
+
+<option>
+
+Transferencia bancaria
+
+</option>
+
+
+<option>
+
+Tarjeta de crédito/débito
+
+</option>
+
 
 </select>
 
+
 </div>
+
+
+
 
 
 
 <div class="grupo">
 
-<label> Mensaje adicional</label>
+
+<label>Mensaje adicional</label>
+
 
 <textarea placeholder="Escribe alguna consulta sobre el equipo"></textarea>
 
+
 </div>
+
+
 
 
 
@@ -296,10 +387,12 @@ Enviar solicitud
 <p id="mensajeExito"></p>
 
 
+
 </form>
 
 
 </section>
+
 
 
 
@@ -313,7 +406,9 @@ Enviar solicitud
 <section id="ubicacion">
 
 
-<h2> Nuestra Ubicación</h2>
+<h2>Nuestra Ubicación</h2>
+
+
 
 
 <iframe 
@@ -328,11 +423,15 @@ allowfullscreen>
 
 
 
+
+
 <p>
 
 <strong>CST Servicio & Tecnología - Ecuador</strong>
 
 </p>
+
+
 
 
 <p>
@@ -342,11 +441,14 @@ allowfullscreen>
 </p>
 
 
+
+
 <p>
 
 Visítanos y encuentra el celular que necesitas.
 
 </p>
+
 
 
 </section>
@@ -363,7 +465,8 @@ Visítanos y encuentra el celular que necesitas.
 <section id="redes">
 
 
-<h2> Redes Sociales</h2>
+<h2>Redes Sociales</h2>
+
 
 
 <p>
@@ -374,6 +477,8 @@ Síguenos para conocer nuevos equipos y promociones.
 
 
 
+
+
 <a href="https://www.instagram.com/CSTtecnologia" target="_blank">
 
 Instagram: CSTtecnologia
@@ -381,7 +486,10 @@ Instagram: CSTtecnologia
 </a>
 
 
+
+
 <br><br>
+
 
 
 
@@ -392,7 +500,10 @@ TikTok: @cstserviciotecnologia
 </a>
 
 
+
+
 <br><br>
+
 
 
 
@@ -423,6 +534,8 @@ WhatsApp: 0962055495
 
 
 </footer>
+
+
 
 
 

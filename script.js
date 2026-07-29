@@ -1,14 +1,15 @@
-// MODELOS DE CELULARES EN VENTA
+// MODELOS DE CELULARES POR MARCA
 
 const celulares = {
 
     Samsung: [
-        "Samsung Galaxy A16",
-        "Samsung Galaxy A26",
-        "Samsung Galaxy A36",
-        "Samsung Galaxy A56",
-        "Samsung Galaxy S25"
+        "Galaxy A16",
+        "Galaxy A26",
+        "Galaxy A36",
+        "Galaxy A56",
+        "Galaxy S25"
     ],
+
 
     Xiaomi: [
         "Redmi 14C",
@@ -16,10 +17,12 @@ const celulares = {
         "Redmi Note 14"
     ],
 
+
     POCO: [
         "POCO X7 Pro",
         "POCO X7"
     ],
+
 
     Motorola: [
         "Moto G15",
@@ -27,11 +30,13 @@ const celulares = {
         "Moto G75"
     ],
 
+
     Honor: [
         "Honor X6c",
         "Honor X8c",
         "Honor 400 Lite"
     ],
+
 
     Apple: [
         "iPhone 13",
@@ -41,49 +46,63 @@ const celulares = {
 };
 
 
-// CONECTAR SELECTS
+
+
+// CAMBIAR MODELOS SEGÚN MARCA
 
 const marca = document.getElementById("marca");
 const modelo = document.getElementById("modelo");
 
 
-// CAMBIAR MODELOS SEGÚN LA MARCA
 
 marca.addEventListener("change", function(){
 
-    modelo.innerHTML =
+
+    let marcaSeleccionada = this.value;
+
+
+    modelo.innerHTML = 
     '<option value="">Selecciona un modelo</option>';
 
 
-    const listaModelos = celulares[this.value];
+
+    if(celulares[marcaSeleccionada]){
 
 
-    if(listaModelos){
+        celulares[marcaSeleccionada].forEach(function(nombre){
 
-        listaModelos.forEach(function(celular){
 
-            const opcion = document.createElement("option");
+            let opcion = document.createElement("option");
 
-            opcion.value = celular;
+            opcion.value = nombre;
 
-            opcion.textContent = celular;
+            opcion.textContent = nombre;
+
 
             modelo.appendChild(opcion);
 
+
         });
 
+
     }
+
 
 });
 
 
-// MENSAJE DE ENVÍO
+
+
+
+// MENSAJE AL ENVIAR FORMULARIO
 
 function mostrarMensaje(event){
 
     event.preventDefault();
 
+
     document.getElementById("mensajeExito").innerHTML =
     "✅ Solicitud enviada correctamente. Un asesor se comunicará contigo.";
+
 
 }
