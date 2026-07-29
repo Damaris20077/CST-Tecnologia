@@ -132,11 +132,11 @@ function mostrarMensaje(event){
 
     "Gracias por confiar en <strong>CST Servicio & Tecnología</strong>. <br><br>" +
 
-    "Nuestro equipo se comunicará contigo al número 📞 <strong>" 
+    "Nuestro equipo se comunicará contigo al número  <strong>" 
     + numeroCliente +
     "</strong> para continuar con tu compra. <br><br>" +
 
-    "📱 Estamos listos para ayudarte a encontrar el celular ideal.";
+    " Estamos listos para ayudarte a encontrar el celular ideal.";
 
 
 
