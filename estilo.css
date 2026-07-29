@@ -164,20 +164,40 @@ section h2{
     min-height:120px;
 }
 
+
+/* BOTON ENVIAR SOLICITUD */
+
 .formulario button{
+
     background:#111;
+
     color:white;
+
     border:none;
+
     padding:15px 30px;
+
     border-radius:10px;
+
     font-size:18px;
+
+    font-weight:bold;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:0.3s;
+
 }
 
+
 .formulario button:hover{
+
     background:#0066ff;
+
+    transform:scale(1.08);
+
 }
+
 
 /* MAPA */
 
@@ -187,8 +207,23 @@ iframe{
     height:450px;
     border:0;
     border-radius:10px;
-    margin-top:20px;
+    display:block;
+    margin:20px auto 60px auto;
 }
+
+
+/* TEXTO DE UBICACIÓN */
+
+#ubicacion p{
+    margin-top:18px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+#ubicacion strong{
+    font-size:22px;
+}
+
 
 /* REDES */
 
@@ -201,6 +236,7 @@ iframe{
 #redes a:hover{
     text-decoration:underline;
 }
+
 
 /* FOOTER */
 
